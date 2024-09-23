@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 3</title>
+    <style>
+        main > * {
+            background: silver;
+        }
+        main {
+            display: grid;
+            width: 960px;
+            min-height: 600px;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 80px 2fr 60px 1fr 1fr 60px;
+            grid-gap: 16px;
+            margin: 20px auto;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+        header 	{grid-row: 1 / 2; grid-column: 1 / span 12;}
+        .logo 	{grid-row: 1 / 2; grid-column: 1 / span 3;}
+        nav 	{
+                    grid-row: 1 / 2; 
+                    grid-column: 7 / span 6;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+        .nav-item {
+            margin: 0 10px; /* Adjust the spacing between items as needed */
+        } 
+        .writing {            
+            background: silver;
+            grid-row: 2/3; 
+            grid-column: 1 / span 12;
+            text-align: center;
+            font-weight: bold;
+        }
+        .bigWriting 	{
+            grid-row: 2 / 3;
+            font-size: 42px;       
+        }
+        .smallWriting 	{
+            grid-row: 2/ 3;
+            font-size: 22px;
+        }
+        .Title1 	{grid-row: 3 / 4; grid-column: 1 / span 3;}
+        .Title2 	{grid-row: 3 / 4; grid-column: 7 / span 3;}
+        .Blog1 	{grid-row: 4 / 5; grid-column: 1 / span 6;}
+        .fprod1 	{grid-row: 4 / 5; grid-column: 7 / span 3;}
+        .fprod2 	{grid-row: 4 / 5; grid-column: 10 / span 3;}
+        .Blog2 	{grid-row: 5 / 6; grid-column: 1 / span 6;}
+        .fprod3	{grid-row: 5 / 6; grid-column: 7 / span 3;}
+        .fprod4 	{grid-row: 5/ 6; grid-column: 10 / span 3;}
+        .Copyright 	{grid-row: 6 / 7; grid-column: 1 / span 12; text-align: center;}
+    </style>
+</head>
+<body>
+    <main>
+        
+            <div class="logo">Company Logo</div>
+            <nav>
+                <div class="nav-item">Item 1</div>
+                <div class="nav-item">Item 2</div>
+                <div class="nav-item">Item 3</div>
+                <div class="nav-item">Item 4</div>
+            </nav>
+        <section class="writing">
+        <p class="bigWriting">Lorem ipsum dolor sit amet, ne saepe<br>
+            phaedrum cotidieque has, natum zril pro ei.</p>
+        <p class="smallWriting">Cu vel aliquid lobortis deseruisse. Name at adipisci dignissim forensibus. Qui an<br>
+            recteque maluisset assentior, cu ferri aperiam imperdiet sed.</p>
+        </section>
+        <div class="Title1">Title</div>
+        <div class="Title2">Title</div>
+        <div class="Blog1">Blog Post 1</div>
+        <div class="Blog2">Blog Post 2</div>
+        <div class="fprod1">Featured Product 1</div>
+        <div class="fprod2">Featured Product 2</div>
+        <div class="fprod3">Featured Product 3</div>
+        <div class="fprod4">Featured Product 4</div>
+        <div class="Copyright">Copyright Notice</div>
+    </main>
+</body>
+</html>
+
